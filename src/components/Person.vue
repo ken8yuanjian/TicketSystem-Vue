@@ -1,32 +1,38 @@
 <template>
-    <div class="car">
-        <h2> 一辆{{ car.brand }},价值{{ car.price }}万</h2>
-        <button @click="changePrice"> 修改价格 </button>
-        <br>
-        <h2>游戏列表</h2>
-        <ul>
-            <li v-for="g in games" :key="g.id">{{ g.name }}</li>
-        </ul>
-        <button @click="changeGamesName">修改游戏名称</button>
+    <div class="person">
+        姓:<input type="text" v-model ="firstName"> <br>  <!-- v-mode 双向绑定 value 数据到页面单向绑定-->
+        名:<input type="text" v-model ="lastName"> <br>
+        全名:<span> {{fullName}} </span><br>
+        <button @click="changeFullName">修改全名</button>
     </div>
 
 </template>
-<script lang="ts" setup name="Car">
-    import { ref } from "vue"; //对象类型的响应数据
-    let car = ref( {brand:'奔驰',price:100})
-    let games =ref([
-    {id:'1',name:'王者荣耀'},
-    {id:'2',name:'吃鸡'},
-    {id:'3',name:'三国志'},
-    ])
-    console.log(car)
-    console.log(games)
-    function changePrice(){
-        car.value.price+=1;
+<script lang="ts" setup name="Person">
+    import { ref,computed } from "vue"; //对象类型的响应数据
+    let firstName =ref( "zhang")
+    let lastName =ref ("san")
+
+    //这么定义的computed属性是只可读，不可修改
+    // let fullName =computed( () =>{
+    //     return firstName.value.slice(0,1).toUpperCase() + firstName.value.slice(1) + 
+    //     lastName.value.slice(0,1).toUpperCase()+lastName.value.slice(1)
+    // })
+    //这么定义computed属性可修改
+    let fullName =computed({
+        get(){
+            return firstName.value.slice(0,1).toUpperCase() + firstName.value.slice(1) + 
+            lastName.value.slice(0,1).toUpperCase()+lastName.value.slice(1)
+        },
+        set(val){
+            const [s1,s2] = val.split('-')
+            firstName.value=s1
+            lastName.value=s2
+        }
+    })
+    function changeFullName(){
+        fullName.value ='Li-Si'
     }
-    function changeGamesName(){
-        games.value[0].name = '流星蝴蝶剑'
-    }
+    
 </script>
 
 <style scoped>
