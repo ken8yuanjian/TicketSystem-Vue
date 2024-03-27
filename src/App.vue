@@ -2,6 +2,7 @@
 <!-- html 内容 -->
 <div class="style1">
     <h1> 你好啊</h1>
+    <h1> test git commit</h1>
     <Person/>
 </div>
 </template>
