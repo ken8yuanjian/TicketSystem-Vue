@@ -12,19 +12,20 @@
 
 </template>
 <script lang="ts" setup name="Car">
-    import { reactive } from "vue"; //对象类型的响应数据
-    let car = reactive( {brand:'奔驰',price:100})
-    let games =reactive([
+    import { ref } from "vue"; //对象类型的响应数据
+    let car = ref( {brand:'奔驰',price:100})
+    let games =ref([
     {id:'1',name:'王者荣耀'},
     {id:'2',name:'吃鸡'},
     {id:'3',name:'三国志'},
     ])
     console.log(car)
+    console.log(games)
     function changePrice(){
-        car.price+=1;
+        car.value.price+=1;
     }
     function changeGamesName(){
-        games[0].name = '流星蝴蝶剑'
+        games.value[0].name = '流星蝴蝶剑'
     }
 </script>
 
