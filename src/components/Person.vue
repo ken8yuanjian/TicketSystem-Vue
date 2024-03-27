@@ -11,18 +11,23 @@
 
 
 <script lang="ts" setup name="Person">
-    let name = '张小三' //注意，此时name 不是响应式
-    let age = 16
+    import { ref } from "vue";
+    let name = ref('张小三') //注意，此时name 是响应式
+    let age = ref(16)
     let tel = '13777777777'
+
+    console.log(1,name)
+    console.log(2,age)
+    console.log(3,tel)  //查看控制台就能发现响应式变量和非响应式变量的区别
 
     //方法
     function changeName() {
-        name = '李四'
-        console.log(name)
+        name.value = '李四' //响应式变量必须操作.value
+        console.log(name.value)
     }
     function changeAge() {
-        age += 1
-        console.log(age)
+        age.value += 1
+        console.log(age.value)
     }
     function showTel() {
         alert(tel)
