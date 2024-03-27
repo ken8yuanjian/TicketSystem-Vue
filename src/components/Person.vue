@@ -10,27 +10,33 @@
     </template>
     
     <script lang="ts">
+import { collapseTextChangeRangesAcrossMultipleVersions } from 'typescript'
+
     //js 或 ts 内容 
         export default{
             name:'Person',
-            data() {
-                return {
-                    name : '张三',
-                    age:18,
-                    tel:'1388888888'
+            setup() {
+                let name = '张三' //注意，此时name 不是响应式
+                let age  = 16
+                let tel  = '13777777777'
+
+                //方法
+                function changeName()
+                {
+                    name ='李四'
+                    console.log(name)
                 }
+                function changeAge()
+                {
+                    age +=1
+                    console.log(age)
+                }
+                function showTel()
+                {
+                    alert(tel)
+                }
+                return {name,age,changeName,changeAge,showTel}
             },
-            methods:{
-                showTel(){
-                    alert(this.tel)
-                },
-                changeName(){
-                    this.name = '张四'
-                },
-                changeAge(){
-                    this.age = 28
-                },
-            }
         }
     </script>
     
