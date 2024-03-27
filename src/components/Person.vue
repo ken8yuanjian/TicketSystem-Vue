@@ -66,6 +66,9 @@ import { ref ,watch} from "vue";
         console.log(newValue,oldValue)
     })
 
+
+    //watchEffect 会自动分析监视的对象
+    
 </script>
 
 <style scoped>
