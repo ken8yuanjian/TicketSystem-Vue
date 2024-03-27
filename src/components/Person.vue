@@ -1,36 +1,30 @@
 <template>
-    <!-- html 内容 -->
-    <div class="person">
-        <h2> 姓名:{{ name }}</h2>
-        <h2> 年龄:{{ age }}</h2>
-        <button @click="changeName">修改名字</button>
-        <button @click="changeAge">修改年龄</button>
-        <button @click="showTel">查看联系方式</button>
+    <div class="car">
+        <h2> 一辆{{ car.brand }},价值{{ car.price }}万</h2>
+        <button @click="changePrice"> 修改价格 </button>
+        <br>
+        <h2>游戏列表</h2>
+        <ul>
+            <li v-for="g in games" :key="g.id">{{ g.name }}</li>
+        </ul>
+        <button @click="changeGamesName">修改游戏名称</button>
     </div>
+
 </template>
-
-
-<script lang="ts" setup name="Person">
-    import { ref } from "vue";
-    let name = ref('张小三') //注意，此时name 是响应式
-    let age = ref(16)
-    let tel = '13777777777'
-
-    console.log(1,name)
-    console.log(2,age)
-    console.log(3,tel)  //查看控制台就能发现响应式变量和非响应式变量的区别
-
-    //方法
-    function changeName() {
-        name.value = '李四' //响应式变量必须操作.value
-        console.log(name.value)
+<script lang="ts" setup name="Car">
+    import { reactive } from "vue"; //对象类型的响应数据
+    let car = reactive( {brand:'奔驰',price:100})
+    let games =reactive([
+    {id:'1',name:'王者荣耀'},
+    {id:'2',name:'吃鸡'},
+    {id:'3',name:'三国志'},
+    ])
+    console.log(car)
+    function changePrice(){
+        car.price+=1;
     }
-    function changeAge() {
-        age.value += 1
-        console.log(age.value)
-    }
-    function showTel() {
-        alert(tel)
+    function changeGamesName(){
+        games[0].name = '流星蝴蝶剑'
     }
 </script>
 
