@@ -9,14 +9,8 @@
     </div>
 </template>
 
-<script lang="ts">
-//js 或 ts 内容 
-export default {
-    name: 'Person',
-}
-</script>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="Person">
     let name = '张小三' //注意，此时name 不是响应式
     let age = 16
     let tel = '13777777777'
