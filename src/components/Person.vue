@@ -10,22 +10,22 @@
 
     
     onBeforeMount(()=>{
-       console.log('挂载前') 
+       console.log('Person挂载前') 
     })
     onMounted(()=>{
-        console.log('挂载后')
+        console.log('Person挂载后')
     })
     onBeforeUpdate(()=>{
-        console.log('更新前')
+        console.log('Person更新前')
     })
     onUpdated(()=>{
-        console.log('更新后')
+        console.log('Person更新后')
     })
     onBeforeUnmount(()=>{
-        console.log('卸载前')
+        console.log('Person卸载前')
     })
     onUnmounted(()=>{
-        console.log('卸载后')
+        console.log('Person卸载后')
     })
 </script>
 
