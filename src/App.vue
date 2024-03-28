@@ -1,20 +1,15 @@
 <template>
 <!-- html 内容 -->
 <div class="style1">
-    <Person :first="persons[0]" :second ="persons[1]" />
+    <Person v-if="isShow" />
 </div>
 </template>
 
 <script lang="ts" setup name="App">
 //js 或 ts 内容 
-    import Person from './components/Person.vue';
-
-    import { type PersonInter,type PersonList  } from "@/types";
-    let persons:PersonList =[
-        {id:'1',name:'张三',age:20},
-        {id:'1',name:'李四'},
-        {id:'1',name:'王五',age:22},
-    ]
+    import Person  from "@/components/Person.vue"
+    import { ref } from "vue";
+    let isShow = ref(true)
 
 </script>
 

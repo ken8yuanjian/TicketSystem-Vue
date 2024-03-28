@@ -1,23 +1,32 @@
 <template>
     <div class="person">
-        <h2>{{ first.id + first.name + first.age }}</h2><br>
-        <h2>{{ second.id + second.name + second.age }}</h2><br>
+        <h2> 哈哈 </h2>
+        <h2> 哈哈 </h2>
+        <h2> 哈哈 </h2>
     </div>
-
 </template>
 <script lang="ts" setup name="Person">
-    import { type PersonInter } from "@/types";
-    import { defineProps } from "vue"; //可以不引入  一般define开头的函数是宏函数，vue中默认可以直接用
+    import { onBeforeMount, onBeforeUnmount, onBeforeUpdate, onMounted, onUnmounted, onUpdated } from 'vue';
 
-    //接收参数，并返回参数对象，不限定类型
-    // let props = defineProps(['first','second'])
-    // console.log("props",props)
-    //接收参数，并返回参数对象，限定类型
-    let props = defineProps<{first:PersonInter,second:PersonInter}>()
-    console.log("props",props)
-    //接收可选、默认值
-    //? withDefaults(defineProps)
     
+    onBeforeMount(()=>{
+       console.log('挂载前') 
+    })
+    onMounted(()=>{
+        console.log('挂载后')
+    })
+    onBeforeUpdate(()=>{
+        console.log('更新前')
+    })
+    onUpdated(()=>{
+        console.log('更新后')
+    })
+    onBeforeUnmount(()=>{
+        console.log('卸载前')
+    })
+    onUnmounted(()=>{
+        console.log('卸载后')
+    })
 </script>
 
 <style scoped>
