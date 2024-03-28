@@ -1,17 +1,21 @@
 <template>
 <!-- html 内容 -->
 <div class="style1">
-    <Person/>
+    <Person :first="persons[0]" :second ="persons[1]" />
 </div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup name="App">
 //js 或 ts 内容 
     import Person from './components/Person.vue';
-    export default{
-        name:'App',
-        components:{Person} //注册组件
-    }
+
+    import { type PersonInter,type PersonList  } from "@/types";
+    let persons:PersonList =[
+        {id:'1',name:'张三',age:20},
+        {id:'1',name:'李四'},
+        {id:'1',name:'王五',age:22},
+    ]
+
 </script>
 
 <style>

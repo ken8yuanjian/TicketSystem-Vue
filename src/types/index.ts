@@ -2,7 +2,7 @@
 export interface PersonInter{
     id:string,
     name:string,
-    age:number,
+    age?:number,    //？表示可选赋值
 }
 
 //ts 定义一个类型声明
