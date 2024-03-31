@@ -1,28 +1,36 @@
 <template>
     <div >
         <h2> promise </h2>
+        <h3>{{ text }}</h3>
     </div>
 </template>
 <script lang="ts" setup name="promise_">
-import { syncBuiltinESMExports } from 'module';
+import { ref } from 'vue';
 
     //promise 是es6提供的异步编程的解决方案
 
     let p = new Promise(function(resolve,reject){
-        setTimeout(function(){
-            let data='数据库中的用户数据'
-            resolve(data)   //设置promise对象为成功标记
-            //reject(err);  //设置promise对象为失败标记
-        },1000)
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET","https://api.apiopen.top/getJ")
+        xhr.send()
+        xhr.onreadystatechange = function(){
+            if (xhr.readyState === 4){
+                if (xhr.status>=200 && xhr.status<=300)
+                    resolve(xhr.response)
+                else
+                    reject(xhr.status)
+            }
+        }
     })
     
+    let text=ref('')
     //开始调用异步编程
-    console.log('async start...')
+    console.log('async request...')
     p.then(function(value){//成功回调
-        console.log(value)
+        text.value =   value
     },
     function(reason){//失败回调
-        console.log(reason)
+        console.log( reason)
     })
     console.log('async end...')
     
