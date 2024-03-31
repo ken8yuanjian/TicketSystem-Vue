@@ -1,10 +1,10 @@
 <template>
 <!-- html 内容 -->
 <div class="style1">
-    <Ticket />
+    <!--Ticket / -->
     <br>
-    <User />
-    <!--functions / -->
+    <!--User / -->
+    <functions />
 </div>
 
 
@@ -12,9 +12,9 @@
 
 <script lang="ts" setup name="App">
 //js 或 ts 内容 
-    import Ticket  from "@/components/ticket.vue"
-    import User from "@/components/user.vue"
-    //import functions from "@/demo/functions.vue"
+    //import Ticket  from "@/components/ticket.vue"
+    //import User from "@/components/user.vue"
+    import functions from "@/demo/functions.vue"
     
     
 
