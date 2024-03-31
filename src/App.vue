@@ -4,7 +4,7 @@
     <!--Ticket / -->
     <br>
     <!--User / -->
-    <functions />
+    <vars />
 </div>
 
 
@@ -14,7 +14,7 @@
 //js 或 ts 内容 
     //import Ticket  from "@/components/ticket.vue"
     //import User from "@/components/user.vue"
-    import functions from "@/demo/functions.vue"
+    import vars from "@/demo/vars.vue"
     
     
 

@@ -1,6 +1,6 @@
 <template>
     <div >
-        <h2> demo </h2>
+        <h2> functions </h2>
         <h3>{{ v_abc1_1 }} + {{ v_abc1_2 }} </h3>
         <h3>{{ v_arrow1(10,15) }} + {{ v_arrow2(5) }}</h3>
         
