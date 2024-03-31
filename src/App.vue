@@ -4,7 +4,7 @@
     <!--Ticket / -->
     <br>
     <!--User / -->
-    <functions />
+    <itretors />
 </div>
 
 
@@ -15,7 +15,8 @@
     //import Ticket  from "@/components/ticket.vue"
     //import User from "@/components/user.vue"
     //import vars from "@/demo/vars.vue"
-    import functions from "@/demo/functions.vue";
+    //import functions from "@/demo/functions.vue";
+    import itretors from "@/demo/itretors.vue"
     
     
 
