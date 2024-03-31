@@ -21,6 +21,11 @@
     }
     let v_arrow2 = (c:number) => c*3
 
+    //参数获取
+    function farmer1(a:string ,b:string) {
+        console.log(arguments)
+    }
+    farmer1('白芷','美丽')
     
 </script>
 
