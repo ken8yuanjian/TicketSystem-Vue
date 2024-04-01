@@ -4,7 +4,7 @@
     <!--Ticket / -->
     <br>
     <!--User / -->
-    <promise_ />
+    <class_ />
 </div>
 
 
@@ -17,7 +17,8 @@
     //import vars from "@/demo/vars.vue"
     //import functions from "@/demo/functions.vue";
     //import itretors from "@/demo/itretors.vue"
-    import promise_ from "@/demo/promise_.vue"
+    //import promise_ from "@/demo/promise_.vue"
+    import class_ from "@/demo/class_.vue"
     
     
 
