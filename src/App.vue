@@ -20,9 +20,6 @@
     //import promise_ from "@/demo/promise_.vue"
     //import class_ from "@/demo/class_.vue"
 
-    import $ from 'jquery'; //es6 导入npm包的语法 等同 const $=require('jquery')
-    $('body').css('background','blue')
-
 </script>
 
 <style>
