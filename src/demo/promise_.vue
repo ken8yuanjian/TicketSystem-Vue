@@ -27,7 +27,7 @@ import { ref } from 'vue';
     //开始调用异步编程
     console.log('async request...')
     p.then(function(value){//成功回调
-        text.value =   value
+        text.value = String(value)
     },
     function(reason){//失败回调
         console.log( reason)

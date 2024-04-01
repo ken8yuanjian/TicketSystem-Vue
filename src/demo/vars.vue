@@ -4,7 +4,8 @@
         <h3> {{ name  }} + {{ age }}</h3>
         <button @click="m()"> 方法</button>
         <h3> {{ arr1  }} + {{ arr2 }}</h3>
-        {{ html }}
+        <div v-html="html">
+        </div>
     </div>
 </template>
 <script lang="ts" setup name="vars">
