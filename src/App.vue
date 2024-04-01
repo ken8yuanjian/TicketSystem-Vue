@@ -4,11 +4,7 @@
     <Ticket />
     <br>
     <!--User / -->
-<<<<<<< HEAD
     <!--class_ /-->
-=======
-    <promise_ />
->>>>>>> parent of 20c93da... class 类定义、继承、get set、private
 </div>
 
 
@@ -21,14 +17,11 @@
     //import vars from "@/demo/vars.vue"
     //import functions from "@/demo/functions.vue";
     //import itretors from "@/demo/itretors.vue"
-<<<<<<< HEAD
     //import promise_ from "@/demo/promise_.vue"
     //import class_ from "@/demo/class_.vue"
-=======
-    import promise_ from "@/demo/promise_.vue"
->>>>>>> parent of 20c93da... class 类定义、继承、get set、private
-    
-    
+
+    import $ from 'jquery'; //es6 导入npm包的语法 等同 const $=require('jquery')
+    $('body').css('background','blue')
 
 </script>
 
