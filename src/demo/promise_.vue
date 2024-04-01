@@ -9,7 +9,7 @@ import { ref } from 'vue';
 
     //promise 是es6提供的异步编程的解决方案
 
-    let p = new Promise(function(resolve,reject){
+    let p:Promise<string> = new Promise(function(resolve,reject){
         const xhr = new XMLHttpRequest();
         xhr.open("GET","https://api.apiopen.top/getJ")
         xhr.send()
@@ -27,7 +27,7 @@ import { ref } from 'vue';
     //开始调用异步编程
     console.log('async request...')
     p.then(function(value){//成功回调
-        text.value = String(value)
+        text.value = value
     },
     function(reason){//失败回调
         console.log( reason)
