@@ -13,6 +13,7 @@ import { ref } from 'vue';
         const xhr = new XMLHttpRequest();
         xhr.open("GET","https://api.apiopen.top/getJ")
         xhr.send()
+        console.log('promise 方法执行了')
         xhr.onreadystatechange = function(){
             if (xhr.readyState === 4){
                 if (xhr.status>=200 && xhr.status<=300)
