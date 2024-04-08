@@ -4,7 +4,7 @@
         
     </div>
 </template>
-<script lang="ts" setup name="objects">
+<script lang="js" setup name="objects">
     //创建对象的三种方式
     //使用对象字面量方式, 一次只能创建一个
     let obj1 ={
@@ -22,9 +22,15 @@
         function m (){
             alert(this.name + this.age)
         }
+        this.n =function(){
+            alert(this.name + this.age)
+        }
     }
-    let obj2_1 = new Obj2('hente',18)
+    import {ref} from 'vue'
+    let obj2_1 = ref( new Obj2('hente',18) )
     let obj2_2 = new Obj2('pite',21)
+    console.log (obj2_1.value.m === obj2_2.m)
+    console.log (obj2_1.value.n === obj2_2.n)
 
     
 </script>

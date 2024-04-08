@@ -6,8 +6,6 @@
     </div>
 </template>
 <script lang="ts" setup name="itretors">
-import { nextTick } from 'process';
-
     let xiyou =['孙悟空','唐僧','猪八戒','沙悟净']
     let str1 =""
     // for of 内部使用itretor迭代器

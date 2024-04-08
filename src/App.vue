@@ -5,10 +5,9 @@
         <br>
         <!--User / -->
         <!--class_ /-->
-        <objects/>
+        <!--objects/-->
+        <animation />
     </div>
-
-
 </template>
 
 <script lang="ts" setup name="App">
@@ -20,10 +19,9 @@
 //import itretors from "@/demo/itretors.vue"
 //import promise_ from "@/demo/promise_.vue"
 //import class_ from "@/demo/class_.vue"
-import objects from "@/demo/objects.vue"
+//import objects from "@/demo/objects.vue"
 
-
-
+ import animation from "@/demo/animation.vue"
 
 
 
