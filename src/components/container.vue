@@ -11,7 +11,9 @@
 <style scoped>
 .default{
     flex: 8.8;
-    background-color: gray;
+    border-color:cornflowerblue;
+    border-width: 1px;
+    border-style: solid;
 
 }
 </style>

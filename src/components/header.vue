@@ -1,7 +1,7 @@
 <!-- 经典布局的顶部header区-->
 <template>
     <div class="default">
-        <p> header 区</p>
+        <p> Ticket System</p>
     </div>
 </template>
 <script lang="ts" setup name="header">
