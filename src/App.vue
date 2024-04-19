@@ -9,9 +9,23 @@
     </div>
 </template>
 
-<script lang="ts" setup name="App">
+<script lang="js" setup name="App">
 
+import {MyAnimal ,MyCat} from "@/demo/function_prototype.js"
 
+let a = new MyAnimal(0,"aaa","descaaaaa")
+console.log('a.prototype',a.prototype)
+console.log('a.__proto__',a.__proto__)
+console.log(MyAnimal.prototype===a.__proto__)
+
+let cat1 = new MyCat(1,"cat1","cat1",4)
+console.log('cat1',cat1)
+console.log('cat1.name',cat1.name)
+cat1.showMe()
+let cat2 = new MyCat(2,"cat2","cat2",4)
+console.log('cat2',cat2)
+console.log('cat2.name',cat2.name)
+cat2.showMe()
 
 
 
