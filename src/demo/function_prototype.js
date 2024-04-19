@@ -32,6 +32,8 @@ console.log(MyAnimal.prototype===a.__proto__) true  new是将类成员变量值p
  a、就是让该函数所实例化的对象们都可以找到公用的属性和方法，且在属性和方法中使用this指针就是实例的指针
  b、实现对js对象的继承,上面说到，当访问一个对象的成员属性时，如果对象本身没有该属性时，会去它的__proto__对象中找，
  如果找不到，继续找__proto__的__proto__对象中的属性，一直往下找。可以利用这一特性，实现类似于java中的继承，
+ MyAnimal.prototype.__proto__ == Object.prototype
+ Object.prototype.__proto__==null   体现了构造函数是继承于根对象Object
  */
 export function MyAnimal(id,name,desc){
     this.id = id
